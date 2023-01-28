@@ -17,5 +17,3 @@ def fasta(file):
                             gene[id]=outl.group(1)
     return gene
 
-x = fasta("Assignment1/close-first.fasta")
-print(x.get("first1"))

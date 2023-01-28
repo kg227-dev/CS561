@@ -35,7 +35,6 @@ For more information, please refer to <http://unlicense.org/>
 """
 
 import numpy as np
-import json
 
 def nw(x, y, match = 1, mismatch = 1, gap = 1):
     nx = len(x)
