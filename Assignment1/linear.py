@@ -1,4 +1,5 @@
 import numpy as np
+import math
 from parsing import *
 gap_pen = -1
 
@@ -45,8 +46,9 @@ def needleman_wunsch(x, y):
             insertion = F[i][j-1] + gap_pen
             #get the max score
             F[i,j] = max(match, deletion, insertion)
-
-    print(F)
+    
+    score = F[i,j]
+    
     #store the alignment 
     linex = ""
     liney = ""
@@ -85,16 +87,105 @@ def needleman_wunsch(x, y):
         liney += y[i-1]
         i-=1
     
-    #traverse the score matrix from the bottom right, our two sequence will be reversed
+    #traverse the score matrix from the bottom right, so reverse the two sequences
     linex = linex[::-1]
     liney = liney[::-1]
 
-    return(linex, liney)
+    return(linex, liney, score)
 
-x = fasta("Assignment1/close-first.fasta").get("first1")[0:40]
-y = fasta("Assignment1/close-second.fasta").get("second1")[0:40]
+def output(x, y):
+    linex, liney, score  = needleman_wunsch(x,y)
+    out_line = ""
+    for i in range(max(len(linex), len(liney))):
+        if linex[i] == liney[i]:
+            out_line += "|"
+        elif (linex[i] == "-" or liney[i] == "-"):
+            out_line += " "
+        else:
+            out_line += "*"
+    matches = out_line.count('|')
+    indels = out_line.count(' ')
+    percent_identity = round(100* matches / ((len(linex)+len(liney))/2))
+    print("Matches: " + str(matches))
+    print("Percent identity: " + str(percent_identity)+"%")
+    print("Indels: " + "number="+str(indels))
+    print("Alignment length: " + str(max(len(linex), len(liney))))
+    print("Score="+str(score))
+    for i in range(math.ceil(max(len(linex), len(liney))/60)):
+        print("\n"+linex[60*i:60*(i+1)])
+        print(out_line[60*i:60*(i+1)])
+        print(liney[60*i:60*(i+1)])
+        
+# Linear-close
+x = fasta("Assignment1/close-first.fasta").get("first1")
+y = fasta("Assignment1/close-second.fasta").get("second1")
+print("Alignment #1:")
+print("\nSequence #1: close-first")
+print("Sequence #2: close-second")
+output(x,y)
 
+"""
+x = fasta("Assignment1/close-first.fasta").get("first2")
+y = fasta("Assignment1/close-second.fasta").get("second2")
+print("Alignment #2:")
+print("\nSequence #1: close-first")
+print("Sequence #2: close-second")
+output(x,y)
 
-linex, liney = needleman_wunsch(x,y)
-print(linex + "\n" + liney)
-    
+x = fasta("Assignment1/close-first.fasta").get("first3")
+y = fasta("Assignment1/close-second.fasta").get("second3")
+print("Alignment #3:")
+print("\nSequence #1: close-first")
+print("Sequence #2: close-second")
+output(x,y)
+
+x = fasta("Assignment1/close-first.fasta").get("first4")
+y = fasta("Assignment1/close-second.fasta").get("second4")
+print("Alignment #4:")
+print("\nSequence #1: close-first")
+print("Sequence #2: close-second")
+output(x,y)
+
+x = fasta("Assignment1/close-first.fasta").get("first5")
+y = fasta("Assignment1/close-second.fasta").get("second5")
+print("Alignment #5:")
+print("\nSequence #1: close-first")
+print("Sequence #2: close-second")
+output(x,y)
+
+x = fasta("Assignment1/close-first.fasta").get("first6")
+y = fasta("Assignment1/close-second.fasta").get("second6")
+print("Alignment #6:")
+print("\nSequence #1: close-first")
+print("Sequence #2: close-second")
+output(x,y)
+
+x = fasta("Assignment1/close-first.fasta").get("first7")
+y = fasta("Assignment1/close-second.fasta").get("second7")
+print("Alignment #7:")
+print("\nSequence #1: close-first")
+print("Sequence #2: close-second")
+output(x,y)
+
+x = fasta("Assignment1/close-first.fasta").get("first8")
+y = fasta("Assignment1/close-second.fasta").get("second8")
+print("Alignment #8:")
+print("\nSequence #1: close-first")
+print("Sequence #2: close-second")
+output(x,y)
+
+x = fasta("Assignment1/close-first.fasta").get("first9")
+y = fasta("Assignment1/close-second.fasta").get("second9")
+print("Alignment #9:")
+print("\nSequence #1: close-first")
+print("Sequence #2: close-second")
+output(x,y)
+
+x = fasta("Assignment1/close-first.fasta").get("first10")
+y = fasta("Assignment1/close-second.fasta").get("second10")
+print("Alignment #10:")
+print("\nSequence #1: close-first")
+print("Sequence #2: close-second")
+output(x,y)
+
+"""
