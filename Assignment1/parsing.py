@@ -1,4 +1,5 @@
 import sys,re
+#function that reads FASTA file and returns a dictionary
 def fasta(file):
     f=open(file,'r')
     lines=f.readlines()
