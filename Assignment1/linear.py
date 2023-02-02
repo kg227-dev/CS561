@@ -21,7 +21,6 @@ def get_score(a,b):
     return score
 
 def needleman_wunsch(x, y):
-    
     #find length of both sequences
     lenx = len(x)
     leny = len(y)
