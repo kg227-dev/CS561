@@ -93,22 +93,19 @@ def needleman_wunsch(x, y):
 
     return(linex, liney, score)
 
-def calc_mean_indel_length(string):
-    spaces = string.split(" ")
+def get_mean_indel_length(s):
     lengths = []
-    count = 0
-    for space in spaces:
-        if space == "":
-            count += 1
-        else:
-            if count != 0:
-                lengths.append(count)
-                count = 0
-            lengths.append(1)
-    if count != 0:
-        lengths.append(count)
-    mean = sum(lengths[:-1])/len(lengths[:-1])
-    return mean
+    current_length = 0
+    for char in s:
+        if char == " ":
+            current_length += 1
+        elif current_length > 0:
+            lengths.append(current_length)
+            current_length = 0
+    if current_length > 0:
+        lengths.append(current_length)
+    return sum(lengths)/len(lengths)
+
 
 def output(x, y):
     linex, liney, score  = needleman_wunsch(x,y)
@@ -125,7 +122,7 @@ def output(x, y):
     percent_identity = round(100* matches / ((len(linex)+len(liney))/2))
     print("Matches: " + str(matches))
     print("Percent identity: " + str(percent_identity)+"%")
-    print("Indels: " + "number="+str(indels) + ", mean length="+str(round(calc_mean_indel_length(out_line),1)))
+    print("Indels: " + "number="+str(indels)+ ", mean length=" + str(get_mean_indel_length(out_line)))
     print("Alignment length: " + str(max(len(linex), len(liney))))
     print("Score="+str(score))
     for i in range(math.ceil(max(len(linex), len(liney))/60)):
@@ -141,13 +138,6 @@ print("\nSequence #1: close-first")
 print("Sequence #2: close-second")
 output(x,y)
 
-
-
-    
-    
-    
-
-"""
 x = fasta("Assignment1/close-first.fasta").get("first2")
 y = fasta("Assignment1/close-second.fasta").get("second2")
 print("Alignment #2:")
@@ -210,5 +200,3 @@ print("Alignment #10:")
 print("\nSequence #1: close-first")
 print("Sequence #2: close-second")
 output(x,y)
-
-"""
