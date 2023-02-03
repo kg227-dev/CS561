@@ -1,7 +1,7 @@
 import numpy as np
 import math
 from parsing import *
-gap_pen = -1
+
 
 def get_score(a,b):
     if a == b:
@@ -28,11 +28,14 @@ def needleman_wunsch(x, y):
     #create matrix of zeros
     F = np.zeros((leny+1, lenx+1))
 
-    #first column
+    #set gap penalty
+    gap_pen = -1
+
+    #fill first column
     for i in range(0, leny+1):
         F[i][0] = gap_pen * i
 
-    #first row
+    #fill first row
     for j in range(0, lenx+1):
         F[0][j] = gap_pen * j 
 
@@ -52,7 +55,7 @@ def needleman_wunsch(x, y):
     linex = ""
     liney = ""
 
-    #set position of i and j 
+    #set position of i and j to bottom right of matrix 
     i = leny
     j = lenx
 
