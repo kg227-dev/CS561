@@ -128,8 +128,8 @@ def output(x, y):
         print("\n"+linex[60*i:60*(i+1)])
         print(out_line[60*i:60*(i+1)])
         print(liney[60*i:60*(i+1)])
-        
-# Linear-close
+"""
+#Linear-close
 x = fasta("Assignment1/close-first.fasta").get("first1")
 y = fasta("Assignment1/close-second.fasta").get("second1")
 print("\nAlignment #1:")
@@ -199,3 +199,77 @@ print("\nAlignment #10:")
 print("\nSequence #1: close-first")
 print("Sequence #2: close-second")
 output(x,y)
+"""
+
+# Linear-distant
+x = fasta("Assignment1/distant-first.fasta").get("2")
+y = fasta("Assignment1/distant-second.fasta").get("2")
+print("\nAlignment #1:")
+print("\nSequence #1: distant-first")
+print("Sequence #2: distant-second")
+output(x,y)
+
+x = fasta("Assignment1/distant-first.fasta").get("4")
+y = fasta("Assignment1/distant-second.fasta").get("4")
+print("\nAlignment #2:")
+print("\nSequence #1: distant-first")
+print("Sequence #2: distant-second")
+output(x,y)
+
+x = fasta("Assignment1/distant-first.fasta").get("9")
+y = fasta("Assignment1/distant-second.fasta").get("9")
+print("\nAlignment #3:")
+print("\nSequence #1: distant-first")
+print("Sequence #2: distant-second")
+output(x,y)
+
+x = fasta("Assignment1/distant-first.fasta").get("10")
+y = fasta("Assignment1/distant-second.fasta").get("10")
+print("\nAlignment #4:")
+print("\nSequence #1: distant-first")
+print("Sequence #2: distant-second")
+output(x,y)
+
+x = fasta("Assignment1/distant-first.fasta").get("12")
+y = fasta("Assignment1/distant-second.fasta").get("12")
+print("\nAlignment #5:")
+print("\nSequence #1: distant-first")
+print("Sequence #2: distant-second")
+output(x,y)
+
+x = fasta("Assignment1/distant-first.fasta").get("19")
+y = fasta("Assignment1/distant-second.fasta").get("19")
+print("\nAlignment #6:")
+print("\nSequence #1: distant-first")
+print("Sequence #2: distant-second")
+output(x,y)
+
+x = fasta("Assignment1/distant-first.fasta").get("21")
+y = fasta("Assignment1/distant-second.fasta").get("21")
+print("\nAlignment #7:")
+print("\nSequence #1: distant-first")
+print("Sequence #2: distant-second")
+output(x,y)
+
+x = fasta("Assignment1/distant-first.fasta").get("24")
+y = fasta("Assignment1/distant-second.fasta").get("24")
+print("\nAlignment #8:")
+print("\nSequence #1: distant-first")
+print("Sequence #2: distant-second")
+output(x,y)
+
+x = fasta("Assignment1/distant-first.fasta").get("27")
+y = fasta("Assignment1/distant-second.fasta").get("27")
+print("\nAlignment #9:")
+print("\nSequence #1: distant-first")
+print("Sequence #2: distant-second")
+output(x,y)
+
+x = fasta("Assignment1/distant-first.fasta").get("34")
+y = fasta("Assignment1/distant-second.fasta").get("34")
+print("\nAlignment #10:")
+print("\nSequence #1: distant-first")
+print("Sequence #2: distant-second")
+output(x,y)
+
+
