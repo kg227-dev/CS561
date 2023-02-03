@@ -121,7 +121,7 @@ def output(x, y):
     percent_identity = round(100* matches / ((len(linex)+len(liney))/2))
     print("Matches: " + str(matches))
     print("Percent identity: " + str(percent_identity)+"%")
-    print("Indels: " + "number="+str(indels)+ ", mean length=" + str(get_mean_indel_length(out_line)))
+    print("Indels: " + "number="+str(indels)+ ", mean length=" + str(round(get_mean_indel_length(out_line),1)))
     print("Alignment length: " + str(max(len(linex), len(liney))))
     print("Score="+str(score))
     for i in range(math.ceil(max(len(linex), len(liney))/60)):
