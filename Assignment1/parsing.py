@@ -1,9 +1,6 @@
 import sys,re
-<<<<<<< HEAD
-=======
 import pandas as pd
 
->>>>>>> sydney
 #function that reads FASTA file and returns a dictionary
 def fasta(file):
     f=open(file,'r')
@@ -23,8 +20,6 @@ def fasta(file):
                             gene[id]=outl.group(1)
     return gene
 
-<<<<<<< HEAD
-=======
 
 """
 Function returns the matrix.txt file as a dictionary in the form { pairing : score }
@@ -42,4 +37,3 @@ def get_scoring_matrix_dict(matrix_txt):
             scoring_dict[key] = score[2]
     
     return scoring_dict
->>>>>>> sydney

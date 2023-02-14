@@ -1,25 +1,27 @@
 import pandas as pd
 from parsing import *
 from affine import *
+from linear import *
+from get_alignment_output import *
 
 def main():
-    matrix_file ="/Users/sydneyballard/Desktop/Desktop - Sydney’s MacBook Pro/CS 561/cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/matrix.txt"
-
-    close1 = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/close-first.fasta"
-    close2 = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/close-second.fasta"
-    distant1 = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/distant-first.fasta"
-    distant2 = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/distant-second.fasta"
+    matrix_file ="cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/matrix.txt"
 
 
-    seq1 = 'AGACGGAGTTCCTTCTTGAGGCAATCTGCGTCTCAATCATAGCCCTCTCTGGCTACCCGCCCGATATCAATCCTGTTGATTATTTCACAGCCCACAAGCCGGCCTGAGCAAGAACGGAGCGCCTACCTACTTTTATGATTGGGATTACAGATTACAGACGTTTGGTATCTGAGCCATGTCTGCCTATAATGATTCGGGCTGGGCCGAAGTGCTACAGTAGACATTAGACATCCAAAGCGACGGTGGATGATCTAAATACTTGG'
-    seq2 = 'AGACGGAGTCCTGCTCTTGAGGCACATTCGCGTCTCTAGACCCATCATAGCCCTCTCTGCTACCCGCCCGATTAATCTCTGTTGATTATTTTCACAGCCCACAAGCCGGCTGAAGCAAGCAACGGACAGCGCTACCTATTTTATGTTGGGATTACAGATTACAGACGTTTTGGCTATCGGCCTAGCCCATGTCTGCCTAATATGATTCGGGCTGGGACCGAAGTGCTCCAGTAGACATTAGACATCGGGCCAAAGCGAGGGTGGAAGTCTAAATACTTGG'
+    ### CLOSE
+    # first_file = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/close-first.fasta"
+    # second_file = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/close-second.fasta"
 
-    # Affine gap score:
-    affine_score = affine(seq1, seq2, matrix_file)
+    ### DISTANT
+    first_file = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/distant-first.fasta"
+    second_file = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/distant-second.fasta"
 
-    print("ALIGNMENT AFTER NW AFFINE:")
-    print("Sequence 1: " + affine_score[0])
-    print("Sequence 2: " + affine_score[1])
+    # Linear scoring: 
+    # output(first_file, second_file, "linear-close.txt", matrix_file)
+
+    # Affine scoring:
+    output(first_file, second_file, "affine-distant.txt", matrix_file, 1)
+    
 
 
 if __name__ == "__main__":

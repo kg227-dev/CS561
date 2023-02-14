@@ -1,17 +1,17 @@
 from parsing import *
+from linear import *
 import numpy as np
+
 
 """
 Affine scoring to penalize small gaps over large gaps
 By Sydney Ballard
 """
-def affine(sequence1, sequence2, matrix):
+def affine(sequence1, sequence2, scoring_matrix):
     gap_open = -4
     gap_extend = -0.1
-    m, n = len(sequence1), len(sequence2)
 
-    # Get dictionary of nucletide match/mismatch score
-    scoring_matrix = get_scoring_matrix_dict(matrix)
+    m, n = len(sequence1), len(sequence2)
 
     # Initialize 3 matrices for traceback
     M = np.zeros((m+1, n+1)) # This is the main "scorekeeper", tracks only match/mismatch
@@ -46,6 +46,8 @@ def affine(sequence1, sequence2, matrix):
             # Matrix tracking best alignment--will add/extend gap or keep match/mismatch based on previous calculations
             M[i][j] = max(match_score, seq1_GAP[i][j], seq2_GAP[i][j])
 
+    max_score = M[i][j]
+
     # Optimal alignment can be found from backtracking from M[m][n]
     align1, align2 = [], []
     i, j = m, n
@@ -78,4 +80,4 @@ def affine(sequence1, sequence2, matrix):
 
     sequence_alignment = "".join(align1[::-1]), "".join(align2[::-1])
         
-    return sequence_alignment
+    return (sequence_alignment[0], sequence_alignment[1], max_score)

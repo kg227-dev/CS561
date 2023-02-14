@@ -1,0 +1,356 @@
+
+Alignment 1:
+
+Sequence #1: distant-first (2)
+Sequence #2: distant-second (2)
+Matches: 176
+Percent identity: 48%
+Indels: number=170, mean length=3.0
+Alignment length: 369
+Score=611.9999999999984
+
+-----C--------ACTCCTTTGGCTCCCGATTTAATACAATCCGC-GTACAGTGAGGCG
+     |        ||*|||   ||||    |||||  ||    || ||||  ||   ||
+GGGTGCATGAATAAACCCCT---GCTC----TTTAA--CA----GCCGTAC--TG---CG
+
+GCGGGCC-CG----------ATTACAGATTACA------GG------GG-GCC-------
+|*|**|| ||          |||||||||||||      ||      || *||       
+GAGAACCTCGCAGTTAAAAGATTACAGATTACATTTAACGGCTCTCTGGTACCACTAAAA
+
+-GG-TT----TTAGTAC-GATATCC-TCGAAGCCG---------CATG---C--GG-CCG
+ || ||    ||| *|| | | ||| ||    |||         ||||   |  || |||
+CGGCTTCTGCTTA-CACTG-T-TCCGTC----CCGGGGTTAGAGCATGGATCAGGGTCCG
+
+GCC-TATGCTGAACCCCGGCTTCTTTAAGCCCTAGACATTAGACATGGGAGGCC-TATAA
+||| ||  |||      ||         |   ||||||||||||||*     || |*|*|
+GCCCTA--CTG------GG---------G---TAGACATTAGACATC-----CCCTTTGA
+
+ACT-GTAATCTAT-CAGATC--TCTATCTGCTAAT-TT----TATCATCGTAGACCTTT-
+*|| ||**||||| ||*|||  |||||*|||  || ||    ||  ||  || |  ||| 
+CCTAGTGGTCTATACATATCAGTCTATGTGC--ATCTTCCCCTA--AT--TA-A--TTTG
+
+TTCAAAGGCAGACTCCATCCATCTTAGCGGTTA--GTCGC----T---TTCG--ACCC--
+||* *||*||*|    ||*|| |||      ||  |*|||    *   |     ||||  
+TTT-GAGACAAA----ATTCA-CTT------TACCGCCGCAAACCAGGT---ACACCCAC
+
+-CCTCGTGA
+ |||* |* 
+CCCTT-TC-
+
+Alignment 2:
+
+Sequence #1: distant-first (4)
+Sequence #2: distant-second (4)
+Matches: 177
+Percent identity: 49%
+Indels: number=145, mean length=3.0
+Alignment length: 358
+Score=615.2999999999985
+
+GAGACCGAGGTTTCT-TGACACGGTAG-AATCCGTAAGTATAGTCGTACGTAGACAAATT
+ ||*|*|||**  || ||*||*| *|| ||**| |||*|*| ||||   ||*|*|     
+-AGTCGGAGCC--CTGTGCCATG-CAGCAACTC-TAAATGT-GTCG---GTTGGC-----
+
+GCCGACCG-----GG----GTT---TAAATT---GA--CGTCCCCCGT------GA----
+||||*|*|     ||    |||   |*|*||   ||  ||||*||**|      ||    
+GCCGGCTGATGGAGGTACAGTTCTGTTATTTCTGGATACGTCTCCTTTGAGAAAGACGGG
+
+TGT---GA-ATTCTCCTCG--CAGTGGCGCCCC---GATTACAGATTACAGGGAGAGTT-
+*||   || ||||     |  ||       ||*   ||||||||||||||*      || 
+CGTAACGACATTC-----GAACA-------CCTAAAGATTACAGATTACAT------TTG
+
+--CTCGA-----AC-CATTT----CT---------TCAAAATTGCATGGTTTTTTTG-AC
+  ||*||     |* |||||    ||         ||||||||| |  ||*||*||| |*
+CCCTTGATCTTCATGCATTTGCACCTCGTTTGTTATCAAAATTG-A--GTCTTGTTGGAA
+
+TTTCTTTATTTACGTGCCCTAGACATTAGACATGGGGGC--T-----C-TCGCTTCTGCC
+|||   |||  |*|*|   ||||||||||||||*    |  |     | ||||  |  ||
+TTT---TAT--ATGGG---TAGACATTAGACATC----CCCTAAACACGTCGC--C--CC
+
+GA--AAAAGCTGCACGGGTGTCACTATATGA-CTTAGCGCGG--CAG--------CT-
+ |  ||*|| |  |*||||       ||||* ||*|*|||||  |||        || 
+-ATTAACAG-T--ATGGGT-------TATGGGCTGATCGCGGGGCAGTTCGATGTCTC
+
+Alignment 3:
+
+Sequence #1: distant-first (9)
+Sequence #2: distant-second (9)
+Matches: 174
+Percent identity: 50%
+Indels: number=149, mean length=2.9
+Alignment length: 345
+Score=605.4999999999984
+
+--GG---GC-----------GCCAAGCCTAATTAGCCGTGACACTTGACGTGCCCTCTAC
+  ||   ||           |*||||    |||||   ||      |*|||  |*||||*
+AAGGTATGCTTATATACTATGGCAAG----ATTAG---TG------GTCGT--CTTCTAT
+
+CTTATGGGT-TGCATCG-----T---AGATAGGTGT-ATTTAAGGGTTCGTTAATATGGT
+||   |||| ||  |||     |   ||||*||||| |*|  |   |*||||        
+CT---GGGTCTG--TCGCGCGATGAGAGATCGGTGTGACT--A---TCCGTT--------
+
+GGCCTCAGGCTTATGGAAG--CCCGA----TTACAGATTACAGGGCAGCTT-GCCCTTCT
+ ||*| ||||      |||  |||||    ||||||||||||      *|| |*||  | 
+-GCGT-AGGC------AAGACCCCGAAAGATTACAGATTACA------TTTTGTCC--C-
+
+TTCTGGAGGGCCA-TGTCGGA-GTTAAGCGGATG-GC--T--C-TT-----CAGAAT-GC
+  |*||||*||*| | ||  | |   |||  ||| ||  |  | ||     |||**| | 
+--CGGGAGAGCTACT-TC--ACG---AGC--ATGTGCCTTACCATTCGCTGCAGGGTCG-
+
+TGTTCTGCCG--ACGCGCCCTAG---------ACATTAGACAT---------GGGTCAAG
+||||*|  ||  |||*|   |||         |||||||||||         |||  ||*
+TGTTTT--CGTCACGGG---TAGGAGGGGTAGACATTAGACATCCCGTTAACGGG--AAT
+
+ACTGAAGCCTTATGG-ACTATGCAGCAATAAACGTA-AT-AGGGT
+||*|||  *|||**| |||| | ||   ||  |||| || |||  
+ACCGAA--TTTAAAGCACTA-G-AG---TA--CGTACATTAGG--
+
+Alignment 4:
+
+Sequence #1: distant-first (10)
+Sequence #2: distant-second (10)
+Matches: 181
+Percent identity: 51%
+Indels: number=151, mean length=2.6
+Alignment length: 358
+Score=629.0999999999982
+
+-C-T-AGGCGGATC--GA-AATTCGCCCGATTACAGATTACAGGGAACTTT----G----
+ * | | |||||||  || ||*      ||||||||||||||      |||    |    
+ATGTCA-GCGGATCAGGACAAA------GATTACAGATTACA------TTTATGTGCATA
+
+---G-AAT------A--------AATTTGGCTTCCATAGAAGAG-TTGTACCAACAACTC
+   | ||*      |        ||    |||*||   |||*|* ||*||   ||  |||
+CACGTAACCACCGGAGGCGCGGTAA----GCTCCC---GAAAAAATTATA---AC--CTC
+
+-ACCTACGGACGCA----G-----GGGACCCCCTAGACATTAGACAT---GGGCATACCA
+ |* ||*|| ||||    |     |||      ||||||||||||||   |||*||  |*
+TAT-TATGG-CGCACAATGCCTACGGG------TAGACATTAGACATCCCGGGTAT--CG
+
+GGA-----TACCCCGTT--GGC-T-AGCGCATCAAC-CAGTACGGTACTTCCGAGCCTT-
+|*|     ||     ||  ||* | |||*| | ||| |*||*||  ||| |*|| |||| 
+GAAAAGCTTA-----TTCAGGTGTAAGCCC-T-AACTCCGTTCG--ACT-CTGA-CCTTC
+
+-----ACGTAATTTTCGTCTAATAATAACGCTGGTGCCA--GTT-T---CCAGCGAGTCG
+     |||||  |||| ||        ||| |*|||*||  *|| |   || || | |  
+ACTACACGTA--TTTC-TC--------ACG-TAGTGTCATCATTATACACC-GC-A-T--
+
+GTG-C-CTGAGACTACGTTCGCC----TG-AG-CACGCCTTGGACG--GTCA--T---
+ || | |||||||**||  ||**    || || | ||||*|||||*   |||  |   
+-TGACTCTGAGACGGCG--CGGTATAATGGAGGC-CGCCCTGGACCCT-TCACCTCGA
+
+Alignment 5:
+
+Sequence #1: distant-first (12)
+Sequence #2: distant-second (12)
+Matches: 178
+Percent identity: 49%
+Indels: number=156, mean length=3.0
+Alignment length: 360
+Score=611.199999999998
+
+GACCCGCCCGAACCGA---ATTGTC----TTG---TAGTGAGCTCTCAGGTGGACACCAC
+    *||||||*|*||   ||*|||    |||   *||*||   |||||      ||||*
+----TGCCCGAGCAGATCCATAGTCGGTGTTGACCCAGCGA---CTCAG------ACCAA
+
+----CCCGATTACAGATTACA---GGGATCCCTT-TAG----GTCCTG-TT-GG-G---G
+       ||||||||||||||   |*| |*|    |||    ||  || || |* |   |
+AAAA---GATTACAGATTACATTTGTG-TTC---ATAGTACGGT--TGATTCGATGTAAG
+
+CAACCTA--CCCA-TGCGGAT----TCTTAGCTGCCTGAAGGTAACCT---TACCCTAGA
+||*||*|  |*|| |||   |    |||| | ||*|  |*|||    |   ||     ||
+CATCCCAGTCACAGTGC---TCCACTCTT-G-TGTC--ACGGT----TGGGTA-----GA
+
+CATTAGACATGGGCTATGCCT----GCAATCAGGTTTGTTGTGGAGCGCACCTCTGTTT-
+||||||||||*  |*||  ||    ||*|| ||  *|||**|  ||   |   |||||| 
+CATTAGACATC--CCAT--CTAACGGCCAT-AG--CTGTAAT--AG---A---CTGTTTC
+
+--TATGGCAGTGTGGGG-A---ATCG---C---GGTA--TCTGACTTGGAATCACTTTGC
+  ||||||    |||*| |   ||||   |   || |  ||||   ||**|       ||
+CTTATGGC----TGGTGCATTCATCGTCCCAAAGG-AGGTCTG---TGAGA-------GC
+
+A-AATGGCA---------------GTCCGCC----A-TC--GAACAGGACCTG---G--T
+| |||||||               |||*|||      ||  |*|| || ||||   |  |
+AGAATGGCAAACTCGAGGGGGGTTGTCTGCCCCGC-TTCTGGTAC-GG-CCTGTTTGACT
+
+Alignment 6:
+
+Sequence #1: distant-first (19)
+Sequence #2: distant-second (19)
+Matches: 173
+Percent identity: 48%
+Indels: number=157, mean length=3.0
+Alignment length: 357
+Score=593.0999999999981
+
+CGGTGGCCACAACAGGAGGCTATGAATCTGTGAAAGGCGTTGGGACGACGA--G-GACT-
+   ||*       |||  |||  |* ||||        ||||   ||*|||  | |||| 
+---TGT-------AGG--GCT--GG-TCTG--------GTTG---CGCCGATCGCGACTC
+
+GA---C--TCCACGTTTATGTT----------CTCGATTGAAT-GTC----TGC--GTTT
+||   |  ||||*||  | ||*          ||||*||*||| |||    |||  |*|*
+GATGGCAATCCAAGT--A-GTCGAGGGCGACCCTCGGTTAAATAGTCAGGCTGCCAGCTC
+
+A-TC--------CGACCCGATTACAGATTACAGG-G--CTC-TAGGGTCTGTGAGATTCT
+| ||        *||** ||||||||||||||**    ||* ||*|||*|||* |  || 
+AATCAATTAAGTTGAAA-GATTACAGATTACATTT-CCCTGTTAAGGTTTGTC-G--TC-
+
+GCGGCGT-T-GTGCCGGCTATAAACCGCC-CCATGGCTGGGCACGAAGTCGATTGTC---
+|||||*| | |||**||   |*|    || || |||  |||   ||| ||  ||*||   
+GCGGCATCTCGTGGTGG---TGA----CCACC-TGG--GGG---GAA-TC--TTCTCGAA
+
+C----C--------TAGACATTAGACAT--------GGGAC--GTGC--------AAT--
+|    |        ||||||||||||||        |||*|  |*||        |||  
+CTGAGCATAAGGGGTAGACATTAGACATCCCTTTACGGGCCTAGAGCTGGAGGTTAATAA
+
+--CCCATGATT--CCAAGTCTCCGGTAGCGCGACCTTCCGGACCTCAACTATGGAG-
+  |||*||     ||||*| |||| ||   ||   ||    |||   ||      | 
+GACCCTTG---CCCCAAAT-TCCG-TA---CG---TT----ACC---AC------GC
+
+Alignment 7:
+
+Sequence #1: distant-first (21)
+Sequence #2: distant-second (21)
+Matches: 174
+Percent identity: 49%
+Indels: number=150, mean length=2.7
+Alignment length: 354
+Score=604.7999999999978
+
+ATGAGTTAT-TTTT-CAATGA----TAGATAAA-GGTATTAAGTGCA--CT-CCA----T
+ |*|*| |* |**| ||| ||    ||*|||** ||||||*||**||  || |||    |
+-TAAAT-ACCTCCTGCAA-GAAAAGTAAATAGGTGGTATTTAGCCCATCCTTCCAAGTAT
+
+-TAG-AAGACCCCTGGAGTACCCTGCGCGAAAC--GTAACC-GACCAAC--GACTTGCGC
+ |*| ||*|*||  |||*| |*|  ||| |*||  ||  || ||* |||  ||||*|||*
+GTGGCAAAATCC--GGATT-CGC--CGC-AGACTAGT--CCAGAG-AACTGGACTCGCGT
+
+CG---GATAG---AGCCGACCCGATTACAGATTACAGGGCAAACCCGTACGCTGGACTGA
+||   ||*||   |||**|   ||||||||||||||           |    |    || 
+CGTTGGACAGTCCAGCAAA---GATTACAGATTACA-----------T----T----TG-
+
+GAGTTTTTG-CGTAG-TTAAAAAACTCA---TT--CACC--CG-GT-----GGG--C-TC
+     |||| || || |||     ||||   ||  ||**  || ||     ||*  | ||
+-----TTTGTCG-AGGTTA-----CTCAAGCTTATCATATACGAGTTGAGCGGATCCATC
+
+TGT-----CCCC----TAGACATTAGACAT---------------G--G----GGGGTCT
+*||     ||||    ||||||||||||||               |  |    ||||   
+CGTTCCAACCCCGGGGTAGACATTAGACATCCCGTAGTACCACGTGTCGTTCAGGGG---
+
+AAAATAAGGGGTAGCCGCGCTGCATGCGTAGGAAGGCTGGTGTGGAG-C-AT--
+|||||   ||| ||*  ||        ||  ||   ||||   ||*| | |*  
+AAAAT---GGG-AGT--CG--------GT--GA---CTGG---GGGGCCAAGGG
+
+Alignment 8:
+
+Sequence #1: distant-first (24)
+Sequence #2: distant-second (24)
+Matches: 181
+Percent identity: 50%
+Indels: number=164, mean length=2.6
+Alignment length: 364
+Score=613.3999999999983
+
+CCCAGGG-------C--T----CCCA-----CGGC-------GG----AGA----ATATG
+   |*||       |  |    ||||     ||||       ||    |||    |||  
+---ATGGTTTTACACATTAACACCCAACGCTCGGCTTGAACAGGTTTTAGACTGGATA--
+
+AGCGTTTCG-CGCATTAC--GAAAAATTGCACACTTACGATGCTAGTA-----GAAC---
+| |||  || |||  |||  |       |||||*  ||| ||| |  |     ||||   
+A-CGT--CGGCGC--TACTCG-------GCACAG--ACG-TGC-A--ACCTCTGAACCCG
+
+-GGAATGCCCTCAGCCTCACAGCTCCTGCATAATCC-------T--AT-CCGCGCAAGG-
+ |||||   *|| |*||| | ||    ||||*||*|       |  || || ||||||| 
+AGGAAT---TTC-GACTC-C-GC----GCATCATTCGTTGGTGTGCATGCC-CGCAAGGA
+
+---TG-GCG-CTCCA-GGTCTCGGGCGAAATTAAGCCCCCGATTACAGATTACAG--GGC
+   || |** |   | |||*||* ||||||   ||      |||||||||||||*  | |
+AAATGAGAAAC---ATGGTGTCC-GCGAAA---AG------ATTACAGATTACATTTG-C
+
+GACGAGATACACAAA--GGTAAGGCCGAAGTACC-ACAGGT-CGCC-GC--T-----GTA
+  |*| ||*   |||  ||*|  ||*|| | ||| *|*||| |||| ||  |     | |
+--CAA-ATG---AAATCGGCA--GCTGA-G-ACCCGCGGGTACGCCAGCAATCAAACG-A
+
+--A----GGTG-CC--TAGGGCCTACACCCCCTAGACATTAGACATGGGCCGCA----AG
+  |    ||*| ||  |||||           ||||||||||||||   || ||    ||
+CGATTCTGGCGTCCGCTAGGG-----------TAGACATTAGACAT---CC-CACGACAG
+
+ATGG
+*|| 
+GTG-
+
+Alignment 9:
+
+Sequence #1: distant-first (27)
+Sequence #2: distant-second (27)
+Matches: 175
+Percent identity: 48%
+Indels: number=162, mean length=2.7
+Alignment length: 361
+Score=582.3999999999988
+
+---G--AAC-----ACAG-----A-GCTTATGTGTCG--CAGC-CGTTTCAGGGAGGTG-
+   |  ||*     |||*     | ||||  |||||*  ||   | |||        || 
+CGCGCAAATGGTTGACAATTTCTATGCTT--GTGTCAAACA--TC-TTT--------TGT
+
+GCTCCGCCT--CTT-------AGC---GTGG-TG--AT-TCTGTTACCAATCCTACGTCT
+|||  |     |||       |||   | || ||  || ||||    ||    ||| |*|
+GCT--G---GGCTTGGGAAAAAGCCAAG-GGCTGCGATATCTG----CA----TAC-TGT
+
+AATAG---GGTTTGTAAAGGAGTTGTCGATTCCCCACTGAACT----GT----CCTAGCT
+   ||   ||||||          | ||*||||    | ||||    ||    ||*|*  
+---AGACCGGTTTG----------G-CGGTTCC----T-AACTTCGTGTGACACCAAA--
+
+CTTTC---T-CC--C---GATTACAGATTACAGGGTTTGATCCAAGAGTACTT---AACT
+  |||   | ||  |   ||||||||||||||   ||| |  ||*||   |||   ||*|
+--TTCACTTGCCAGCAAAGATTACAGATTACA---TTT-A--CACGA---CTTCGAAATT
+
+G-----G-T--TAC---TA---T-AAGTGAGTCAGGCT--CTTTCAACGGTCACACCCCC
+|     | |  |||   ||   | ||||*|||   |*|   |||*||*|*|**|  |*||
+GCGACAGATCCTACCGATACCTTGAAGTTAGT---GTTGG-TTTAAAAGATTGC--CTCC
+
+C--TAGACATTAGACATG--GGGACTGCA-----ACGC-CACGGCGACTGTGCGGTCGAC
+*  ||||||||||||||*  |   | |||     |||| |*||| |*||***|  | | |
+GGGTAGACATTAGACATCCCG---C-GCAGTAGAACGCGCGCGG-GGCTACAC--T-G-C
+
+G
+ 
+-
+
+Alignment 10:
+
+Sequence #1: distant-first (34)
+Sequence #2: distant-second (34)
+Matches: 178
+Percent identity: 48%
+Indels: number=174, mean length=3.1
+Alignment length: 371
+Score=613.7999999999979
+
+---GCG---ATCTATTTGT--AGAGG-GA---GGACATCACACC-GT-GAAT--GGC---
+   |||   |||*|   ||  | ||| ||   |||    ||*|| || |*|*  |||   
+TCCGCGTTGATCAA---GTCTA-AGGAGATAGGGA----ACGCCTGTAGTACCGGGCATC
+
+-TTC-TAAAGGCCTGGC----CA-TATTCTC-------CCACGCGCGTCTGTAGCATGCC
+ ||| ||||    |* |    || |||| ||       |*||||||| |     ||*   
+TTTCCTAAA----TT-CAAATCAGTATT-TCAGGGCGACTACGCGCG-C-----CAA---
+
+C-GATTACAGATTACAGGGCCCCCGCTGGTTCAATGAGCCA-----AG--TTC------A
+  ||||||||||||||          |  |||  ||  |||     ||  |||      |
+-AGATTACAGATTACA----------T--TTC--TG--CCATACGAAGGATTCCGCACGA
+
+G----TGCTCCCTCACCTGCTACGGGACAGGGTCG-CCCTAGTT--------------CC
+|    ||*|||      |||    ||||  |*||| ||||||||              ||
+GATGTTGTTCC------TGC----GGAC--GCTCGGCCCTAGTTAGCTCGCACCGCCACC
+
+--C----TAGACATTAGACATGGGCACC-T--ATACAGTCCTC-----GA---TGG---G
+  |    ||||||||||||||   | || |  ||*  ||*|||     ||   |||   |
+ATCGGGGTAGACATTAGACAT---C-CCGTGAATG--GTTCTCACAAAGACCATGGTCAG
+
+G-TGGCGAAAAATTGA--GCGGAACTTTACAGTTCAGAGGGTCAGTGTGCATCCAA---T
+* ||| |     ||*|  ||||||    ||**|||*||       |** |*|||||   |
+CTTGG-G-----TTCATCGCGGAA----ACGATTCTGA-------TAC-CCTCCAACGGT
+
+-TC-CT--GCC
+ || ||  |  
+ATCGCTTAG--
