@@ -1,4 +1,4 @@
-Alignment #1:
+Alignment 1:
 
 Sequence #1: close-first
 Sequence #2: close-second
@@ -28,7 +28,7 @@ AGTAGACATTAGACAT----CCAAAGCGA-CGGTGG-ATGATCTAAATACTTGG
 ||||||||||||||||    |||||||||  ||||| | | |||||||||||||
 AGTAGACATTAGACATCGGGCCAAAGCGAG-GGTGGAA-G-TCTAAATACTTGG
 
-Alignment #2:
+Alignment 2:
 
 Sequence #1: close-first
 Sequence #2: close-second
@@ -58,7 +58,7 @@ GGC-A---G-ACTCCATCCATCTTAGCGGTTAGTCGCTTTCG---A-CCCCCTCGTGA
 ||| |   | *|||||||||||||||| ||| | ||||||||   | |||||||||||
 GGCGACGCGTGCTCCATCCATCTTAGC-GTT-G-CGCTTTCGACTAGCCCCCTCGTGA
 
-Alignment #3:
+Alignment 3:
 
 Sequence #1: close-first
 Sequence #2: close-second
@@ -88,7 +88,7 @@ ATTTAGACATTAGACATCTGGGGATGTGCCCACA-ATAACGATT
 ||||||||||||||||||| |||| ||||||||| | |||||||
 ATTTAGACATTAGACATCT-GGGA-GTGCCCACAGA-AACGATT
 
-Alignment #4:
+Alignment 4:
 
 Sequence #1: close-first
 Sequence #2: close-second
@@ -118,7 +118,7 @@ AAAAGCTGCACGG---GTGT-C-ACTATATGACTTAGCGCGGCAGCT
 |||||||||||||   |||| | ||||||||||||   |||||||||
 AAAAGCTGCACGGAAAGTGTCCGACTATATGACTT---GCGGCAGCT
 
-Alignment #5:
+Alignment 5:
 
 Sequence #1: close-first
 Sequence #2: close-second
@@ -152,7 +152,7 @@ AAACCCT-CGGCGGGTT
 ||||||| | |||||||
 AAACCCTAC-GCGGGTT
 
-Alignment #6:
+Alignment 6:
 
 Sequence #1: close-first
 Sequence #2: close-second
@@ -182,7 +182,7 @@ C----GATGTTGC--C-A-A-TAAACCGCGATTGTTA-CTC-TA-GA-
 |    ||||||||  * | | | |||||||||||||| |||  | || 
 CTAGTGATGTTGCTTTAAGAGT-AACCGCGATTGTTACCTCA-AGGAC
 
-Alignment #7:
+Alignment 7:
 
 Sequence #1: close-first
 Sequence #2: close-second
@@ -212,7 +212,7 @@ GCCACCGC--T-ACAGTGGGACTAGTGGAGGGATGTGGGGGTT
  |||||||  | |||||||| ||| | ||||||||||||||||
 -CCACCGCTGTAACAGTGGG-CTA-T-GAGGGATGTGGGGGTT
 
-Alignment #8:
+Alignment 8:
 
 Sequence #1: close-first
 Sequence #2: close-second
@@ -246,7 +246,7 @@ A
 |
 A
 
-Alignment #9:
+Alignment 9:
 
 Sequence #1: close-first
 Sequence #2: close-second
@@ -276,7 +276,7 @@ TGAAGCCTTATGG-ACTATGCAGCAATAAACGTAATAGGGT
 ||||||| | ||| |||||||||| | ||||| ||||||||
 TGAAGCC-T-TGGAACTATGCAGC-A-AAACG-AATAGGGT
 
-Alignment #10:
+Alignment 10:
 
 Sequence #1: close-first
 Sequence #2: close-second

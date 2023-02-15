@@ -1,7 +1,7 @@
-Alignment #1:
+Alignment 1:
 
-Sequence #1: distant-first
-Sequence #2: distant-second
+Sequence 1: distant-first
+Sequence 2: distant-second
 Matches: 180
 Percent identity: 52%
 Indels: number=126, mean length=1.7
@@ -32,10 +32,10 @@ ATCCATCTTA--G-CG---GTTA-GT-CGCTTTCGACCCCCTCGTGA
 |  | | |||  | ||   ***| || |*|  *| | |||||* | *
 A--C-T-TTACCGCCGCAAACCAGGTACAC--CC-A-CCCCTT-T-C
 
-Alignment #2:
+Alignment 2:
 
-Sequence #1: distant-first
-Sequence #2: distant-second
+Sequence 1: distant-first
+Sequence 2: distant-second
 Matches: 185
 Percent identity: 52%
 Indels: number=139, mean length=1.7
@@ -66,10 +66,10 @@ GGAATT-TTATATGGG---TAGACATTAGACATC-----CCCTAAACACGTC-GCCCC-A
   ||*|| |  |*|||| | | |  ** ||| |* ||   ||*|  | | | || 
 TTAACAG-T--ATGGGT-T-A-TGGGC-TGA-TC-GCGGGGCAGTTCGATGTCTC
 
-Alignment #3:
+Alignment 3:
 
-Sequence #1: distant-first
-Sequence #2: distant-second
+Sequence 1: distant-first
+Sequence 2: distant-second
 Matches: 179
 Percent identity: 54%
 Indels: number=121, mean length=1.5
@@ -100,10 +100,10 @@ G-ACTATGCAGCAATAAACGTA-A-TAGGGT
 | |||| | ||   |  ||||| | || || 
 GCACTA-G-AG---T--ACGTACATTA-GG-
 
-Alignment #4:
+Alignment 4:
 
-Sequence #1: distant-first
-Sequence #2: distant-second
+Sequence 1: distant-first
+Sequence 2: distant-second
 Matches: 188
 Percent identity: 54%
 Indels: number=131, mean length=1.5
@@ -134,10 +134,10 @@ GTGC-CT-GAGACTACGTTCGCCTGAGCACGCCTT-GGA-CGGTC-AT
 ||** *| |||*|  ||  | |||| | || ||||   | |  || | 
 GTATAATGGAGGC--CG--C-CCTG-G-AC-CCTTC--ACC--TCGA-
 
-Alignment #5:
+Alignment 5:
 
-Sequence #1: distant-first
-Sequence #2: distant-second
+Sequence 1: distant-first
+Sequence 2: distant-second
 Matches: 186
 Percent identity: 54%
 Indels: number=126, mean length=1.5
@@ -168,10 +168,10 @@ TT-TGCAAATGGCAGTCCGCCATC-GA-ACAGGACCTG---G--T
 || | |   | ||  *||||* || |* || || ||||   |  |
 TTGT-C---T-GC--CCCGCT-TCTGGTAC-GG-CCTGTTTGACT
 
-Alignment #6:
+Alignment 6:
 
-Sequence #1: distant-first
-Sequence #2: distant-second
+Sequence 1: distant-first
+Sequence 2: distant-second
 Matches: 179
 Percent identity: 51%
 Indels: number=147, mean length=1.7
@@ -202,10 +202,10 @@ CGGTAGCG----C--GA-CCTT---CCGGA--CC-TCAAC--TA-TGGA-G-
  || || |    *  || ||||   ||**|  || |  ||  || *  | | 
 -GG-AG-GTTAATAAGACCCTTGCCCCAAATTCCGT--ACGTTACC--ACGC
 
-Alignment #7:
+Alignment 7:
 
-Sequence #1: distant-first
-Sequence #2: distant-second
+Sequence 1: distant-first
+Sequence 2: distant-second
 Matches: 183
 Percent identity: 54%
 Indels: number=122, mean length=1.5
@@ -236,10 +236,10 @@ TAGCCGCGCTG-CATGCGTAGGAAGGCTGGTGTGGAGCAT
  ||*|| | || | || |  ||  |||* * * || |   
 -AGTCG-G-TGAC-TG-G--GG--GGCC-A-A-GG-G---
 
-Alignment #8:
+Alignment 8:
 
-Sequence #1: distant-first
-Sequence #2: distant-second
+Sequence 1: distant-first
+Sequence 2: distant-second
 Matches: 183
 Percent identity: 52%
 Indels: number=140, mean length=1.6
@@ -270,10 +270,10 @@ AGG-G--C-CTA--CACCCCCTAGACATTAGACAT-GGGCCGC-A-AGATGG
  || |  | |||   *     ||||||||||||||    ||*| | ||*| |
 -GGCGTCCGCTAGG-G-----TAGACATTAGACATC---CCACGACAGGT-G
 
-Alignment #9:
+Alignment 9:
 
-Sequence #1: distant-first
-Sequence #2: distant-second
+Sequence 1: distant-first
+Sequence 2: distant-second
 Matches: 181
 Percent identity: 52%
 Indels: number=130, mean length=1.6
@@ -304,10 +304,10 @@ T-TGAAGTTAGT-GTT-GG---TTTAAAAGATTGC-CTCCGGG--TAGACATTAGACATC
   | | *| |  | ||||   | ||| | | | || | | || | 
 CCGCGCAGTA--G-AACG---C-GCG-C-G-G-GGCTAC-ACTGC
 
-Alignment #10:
+Alignment 10:
 
-Sequence #1: distant-first
-Sequence #2: distant-second
+Sequence 1: distant-first
+Sequence 2: distant-second
 Matches: 187
 Percent identity: 53%
 Indels: number=138, mean length=1.7
