@@ -33,10 +33,10 @@ def main():
     # output() function performs bulk of operations, including console output to new file
 
     # Linear scoring:
-    output(first_file, second_file, "linear-close.txt", matrix_file)
+    #output(first_file, second_file, "linear-close.txt", matrix_file)
 
     # Affine scoring:
-    # output(first_file, second_file, "affine-distant.txt", matrix_file, 1)
+    output(first_file, second_file, "affine-distant.txt", matrix_file, 1)
 
 
 if __name__ == "__main__":

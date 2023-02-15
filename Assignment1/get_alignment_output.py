@@ -53,7 +53,7 @@ def output(file1, file2, save_to_file, matrix, is_affine=0):
         # Get one sequence from each file
         x = fasta(file1).get(first)
         y = fasta(file2).get(second)
-        print(x)
+
         # Get dictionary of nucletide match/mismatch score
         score_matrix = get_scoring_matrix_dict(matrix)
 
