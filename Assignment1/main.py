@@ -9,7 +9,7 @@ def main():
     # PAIRWISE SCORING MATRIX  #
     ############################
     # File path to scoring matrix
-    matrix_file ="cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/matrix.txt"
+    matrix_file ="Assignment1/input files/matrix.txt"
 
 
     ############################
@@ -24,8 +24,8 @@ def main():
     # second_file = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/close-second.fasta"
 
     ### DISTANT
-    first_file = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/distant-first.fasta"
-    second_file = "cs561 repository COLLABORATIVE W KUSH/CS561/Assignment1/distant-second.fasta"
+    first_file = "Assignment1/input files/distant-first.fasta"
+    second_file = "Assignment1/input files/distant-second.fasta"
 
 
     ############################
