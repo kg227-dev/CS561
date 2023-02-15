@@ -2,6 +2,11 @@ import numpy as np
 import math
 from parsing import *
 
+"""
+Function returns the score of each pairing based on matrix.txt
+By: Kush Gulati
+"""
+
 
 def get_score(a, b):
     if a == b:
@@ -19,6 +24,12 @@ def get_score(a, b):
     else:
         score = -2
     return score
+
+
+"""
+Implementation of Needleman_Wunsch algorithm with linear scoring
+By: Kush Gulati
+"""
 
 
 def needleman_wunsch(x, y):
@@ -97,6 +108,12 @@ def needleman_wunsch(x, y):
     return (linex, liney, score)
 
 
+"""
+Function that returns the mean indel length of a given alignment
+By: Kush Gulati
+"""
+
+
 def get_mean_indel_length(s):
     lengths = []
     current_length = 0
@@ -109,6 +126,12 @@ def get_mean_indel_length(s):
     if current_length > 0:
         lengths.append(current_length)
     return sum(lengths)/len(lengths)
+
+
+"""
+Function that properly formats the output and prints it to the console
+By: Kush Gulati
+"""
 
 
 def get_output(x, y):
