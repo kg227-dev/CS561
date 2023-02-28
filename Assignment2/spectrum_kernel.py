@@ -15,7 +15,6 @@ def spectrum_kernel(seq1, seq2, k):
     for i, kmer in enumerate(sorted(kmers)):
         kmer_dict[kmer] = i
 
-
     # Convert sequences to feature vectors
     vec1 = seq_to_vec(seq1, kmer_dict, k)
     vec2 = seq_to_vec(seq2, kmer_dict, k)
