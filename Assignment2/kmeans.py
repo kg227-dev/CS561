@@ -1,5 +1,3 @@
-import numpy as np
-import random
 from spectrum_kernel import *
 from mismatch_kernel import *
 
