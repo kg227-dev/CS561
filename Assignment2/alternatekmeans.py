@@ -1,6 +1,5 @@
 import numpy as np
 from spectrum_kernel import *
-from sklearn.cluster import KMeans
 
 
 def parse_fasta_file(file_name):
@@ -27,23 +26,34 @@ def parse_fasta_file(file_name):
     return sequences, class_names
 
 
-def compute_similarity_matrix(sequences, k):
+def kmeans_clustering(sequences, kmer_size, num_clusters):
+    # Compute pairwise similarities between sequences
     n = len(sequences)
-    sim_matrix = np.zeros((n, n))
+    similarities = np.zeros((n, n))
     for i in range(n):
         for j in range(i, n):
-            sim_matrix[i][j] = sim_matrix[j][i] = spectrum_kernel(sequences[i], sequences[j], k)
-        print(i)
-    return sim_matrix
+            sim = spectrum_kernel(sequences[i], sequences[j], kmer_size)
+            similarities[i, j] = sim
+            similarities[j, i] = sim
 
+    # Initialize cluster centroids randomly
+    centroids = np.random.rand(num_clusters, n)
 
+    # Iterate until convergence
+    for i in range(10):
+        # Assign each sequence to nearest centroid
+        distances = np.linalg.norm(similarities[:, :, np.newaxis] - centroids.T[np.newaxis, np.newaxis, :, :], axis=3)
+        cluster_indices = np.argmin(distances, axis=2)
 
-def cluster_sequences(sequences, k, n_clusters):
-    sim_matrix = compute_similarity_matrix(sequences, k)
-    kmeans = KMeans(n_clusters=n_clusters, random_state=0).fit(sim_matrix)
-    labels = kmeans.labels_
-    return labels
+        # Update centroids
+        feature_vectors = np.zeros((num_clusters, n))
+        for cluster in range(num_clusters):
+            feature_vectors[cluster, :] = np.sum(similarities[cluster_indices == cluster, :], axis=0)
+        nonempty_clusters = np.sum(cluster_indices == np.arange(num_clusters)[:, np.newaxis], axis=1)
+        centroids[nonempty_clusters > 0, :] = feature_vectors[nonempty_clusters > 0, :] / nonempty_clusters[nonempty_clusters > 0, np.newaxis]
 
+    # Return cluster assignments
+    return np.argmax(distances, axis=1)
 
 if __name__ == '__main__':
     # Parse FASTA file into sequences and class names
@@ -51,6 +61,5 @@ if __name__ == '__main__':
         "Assignment2/kmeans/kmeans.fasta")
 
 
-    labels = cluster_sequences(
-        sequences, 3, 4)
-    print(labels)
+    labels = kmeans_clustering(
+        sequences[0:10], 3, 4)

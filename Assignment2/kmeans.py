@@ -71,6 +71,9 @@ if __name__ == '__main__':
     # Parse FASTA file into sequences and class names
     sequences, class_names = parse_fasta_file(
         "Assignment2/kmeans/kmeans.fasta")
+    
+    print(sequences)
+    
 
 
     cluster_assignments, centroids = kmeans_cluster(
