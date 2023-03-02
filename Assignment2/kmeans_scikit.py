@@ -1,5 +1,6 @@
+import numpy as np
+from sklearn.cluster import KMeans
 from spectrum_kernel import *
-from mismatch_kernel import *
 
 
 def parse_fasta_file(file_name):
@@ -26,10 +27,7 @@ def parse_fasta_file(file_name):
     return sequences, class_names
 
 
-def kmeans_cluster(sequences, kmer_size, num_clusters, max_iter=100):
-    # Initialize centroids
-    centroids = np.random.choice(sequences, size=num_clusters, replace=False)
- 
+def kmeans_clustering(sequences, kmer_size, num_clusters):
     # Generate k-mer dictionary
     kmers = set()
     for seq in sequences:
@@ -45,34 +43,19 @@ def kmeans_cluster(sequences, kmer_size, num_clusters, max_iter=100):
     for i, seq in enumerate(sequences):
         for j, seq2 in enumerate(sequences):
             feature_vectors[i, j] = spectrum_kernel(seq, seq2, kmer_size)
-    
-    cluster_assignments = np.zeros(len(sequences))
 
-    # K-means algorithm
-    for iter in range(max_iter):
-        # Assign sequences to closest centroid
-        for i, seq in enumerate(sequences):
-            similarities = np.zeros(num_clusters)
-            for j, centroid in enumerate(centroids):
-                similarities[j] = spectrum_kernel(seq, centroid, kmer_size)
-            cluster_assignments[i] = np.argmax(similarities)
+    # Perform K-means clustering
+    kmeans = KMeans(n_clusters=num_clusters, random_state=0).fit(feature_vectors)
 
-        # Update centroids
-        for j in range(num_clusters):
-            cluster_indices = np.where(cluster_assignments == j)[0]
-            if len(cluster_indices) > 0:
-                centroids[j] = np.mean(
-                    feature_vectors[cluster_indices, :], axis=0)
-
-
-    return cluster_assignments, centroids
-
+    # Return cluster assignments
+    return kmeans.labels_
 
 if __name__ == '__main__':
     # Parse FASTA file into sequences and class names
     sequences, class_names = parse_fasta_file(
         "Assignment2/kmeans/kmeans.fasta")
 
-    cluster_assignments, centroids = kmeans_cluster(
-        sequences[0:20], kmer_size=3, num_clusters=4)
-    print(cluster_assignments)
+
+    labels = kmeans_clustering(
+        sequences[0:200], 3, 5)
+    print(labels)
