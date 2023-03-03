@@ -2,19 +2,7 @@ import numpy as np
 import random
 
 
-def spectrum_kernel(seq1, seq2, k):
-    # Generate set of all possible k-mers
-    kmers = set()
-    for i in range(len(seq1) - k + 1):
-        kmers.add(seq1[i:i+k])
-    for i in range(len(seq2) - k + 1):
-        kmers.add(seq2[i:i+k])
-
-    # Create dictionary mapping k-mers to indices
-    kmer_dict = {}
-    for i, kmer in enumerate(sorted(kmers)):
-        kmer_dict[kmer] = i
-
+def spectrum_kernel(seq1, seq2, k, kmer_dict):
     # Convert sequences to feature vectors
     vec1 = seq_to_vec(seq1, kmer_dict, k)
     vec2 = seq_to_vec(seq2, kmer_dict, k)
