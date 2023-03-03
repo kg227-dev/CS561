@@ -29,7 +29,7 @@ def parse_fasta_file(file_name):
 def kmeans_cluster(sequences, kmer_size, num_clusters, max_iter=100):
     # Initialize centroids
     centroids = np.random.choice(sequences, size=num_clusters, replace=False)
- 
+
     # Generate k-mer dictionary
     kmers = set()
     for seq in sequences:
@@ -40,21 +40,23 @@ def kmeans_cluster(sequences, kmer_size, num_clusters, max_iter=100):
     for i, kmer in enumerate(sorted(kmers)):
         kmer_dict[kmer] = i
 
+    centroids = [seq_to_vec(centroid, kmer_dict, kmer_size)
+                 for centroid in centroids]
+
     # Convert sequences to feature vectors
-    feature_vectors = np.zeros((len(sequences), len(sequences)))
+    feature_vectors = np.zeros((len(sequences), len(kmer_dict)))
     for i, seq in enumerate(sequences):
-        for j, seq2 in enumerate(sequences):
-            feature_vectors[i, j] = spectrum_kernel(seq, seq2, kmer_size)
-    
+        feature_vectors[i, :] = seq_to_vec(seq, kmer_dict, kmer_size)
+
     cluster_assignments = np.zeros(len(sequences))
 
     # K-means algorithm
     for iter in range(max_iter):
         # Assign sequences to closest centroid
-        for i, seq in enumerate(sequences):
+        for i, seq in enumerate(feature_vectors):
             similarities = np.zeros(num_clusters)
             for j, centroid in enumerate(centroids):
-                similarities[j] = spectrum_kernel(seq, centroid, kmer_size)
+                similarities[j] = np.dot(seq, centroid)
             cluster_assignments[i] = np.argmax(similarities)
 
         # Update centroids
@@ -64,15 +66,32 @@ def kmeans_cluster(sequences, kmer_size, num_clusters, max_iter=100):
                 centroids[j] = np.mean(
                     feature_vectors[cluster_indices, :], axis=0)
 
-
     return cluster_assignments, centroids
+
+
+def get_output(cluster_assignments, kmer_size, num_clusters):
+    print("SPECTRUM KERNEL (KMER={}, CLUSTERS={}):".format(kmer_size, num_clusters))
+    for i in range(num_clusters):
+        print("CLUSTER {}:".format(i+1))
+        indices = np.where(cluster_assignments == i)[0]
+        classes = [class_names[index] for index in indices]
+        freq_dict = {s: classes.count(s)
+                     for s in ['intergenic', 'intron', 'exon']}
+        print("\tintergenic = {} ({})".format(
+            np.round(freq_dict['intergenic']/len(classes), 2), freq_dict['intergenic']))
+        print("\tintron = {} ({})".format(
+            np.round(freq_dict['intron']/len(classes), 2), freq_dict['intron']))
+        print("\texon = {} ({})".format(
+            np.round(freq_dict['exon']/len(classes), 2), freq_dict['exon']))
+    return None
 
 
 if __name__ == '__main__':
     # Parse FASTA file into sequences and class names
     sequences, class_names = parse_fasta_file(
         "Assignment2/kmeans/kmeans.fasta")
-
+    kmer_size = 3
+    num_clusters = 4
     cluster_assignments, centroids = kmeans_cluster(
-        sequences[0:20], kmer_size=3, num_clusters=4)
-    print(cluster_assignments)
+        sequences, kmer_size, num_clusters)
+    get_output(cluster_assignments, kmer_size, num_clusters)

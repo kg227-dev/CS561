@@ -45,16 +45,17 @@ def kmeans_clustering(sequences, kmer_size, num_clusters):
             feature_vectors[i, j] = spectrum_kernel(seq, seq2, kmer_size)
 
     # Perform K-means clustering
-    kmeans = KMeans(n_clusters=num_clusters, random_state=0).fit(feature_vectors)
+    kmeans = KMeans(n_clusters=num_clusters,
+                    random_state=0).fit(feature_vectors)
 
     # Return cluster assignments
     return kmeans.labels_
+
 
 if __name__ == '__main__':
     # Parse FASTA file into sequences and class names
     sequences, class_names = parse_fasta_file(
         "Assignment2/kmeans/kmeans.fasta")
-
 
     labels = kmeans_clustering(
         sequences[0:200], 3, 5)
