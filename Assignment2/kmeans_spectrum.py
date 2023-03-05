@@ -1,5 +1,4 @@
 from spectrum_kernel import *
-from mismatch_kernel import *
 from parse_fasta import *
 
 
@@ -52,7 +51,7 @@ def kmeans_spectrum_cluster(sequences, kmer_size, num_clusters, max_iter=100):
     return cluster_assignments, centroids
 
 
-def get_output(cluster_assignments, kmer_size, num_clusters):
+def get_spectrum_output(cluster_assignments, kmer_size, num_clusters):
     print("SPECTRUM KERNEL (KMER={}, CLUSTERS={}):".format(kmer_size, num_clusters))
     for i in range(num_clusters):
         print("CLUSTER {}:".format(i+1))
@@ -77,5 +76,5 @@ if __name__ == '__main__':
     num_clusters = 5
     cluster_assignments, centroids = kmeans_spectrum_cluster(
         sequences, kmer_size, num_clusters)
-    get_output(cluster_assignments, kmer_size, num_clusters)
+    get_spectrum_output(cluster_assignments, kmer_size, num_clusters)
 

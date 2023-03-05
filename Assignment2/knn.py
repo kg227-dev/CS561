@@ -59,12 +59,11 @@ def knn(X_train, y_train, X_test, k, kmer_size):
 
 
 def get_accuracy(sample_size, kmer_size, num_neighbor, preds, y_test):
-    #print("\nSample Size: {}".format(sample_size))
-    #print("Kmer Size: {}".format(kmer_size))
-    #print("Number of Neighbors: {}".format(num_neighbor))
+    # print("\nSample Size: {}".format(sample_size))
+    # print("Kmer Size: {}".format(kmer_size))
+    # print("Number of Neighbors: {}".format(num_neighbor))
     count = sum(1 for i in range(len(preds)) if preds[i] == y_test[i])
     accuracy = count / len(y_test)
-    print("Accuracy: {}".format(accuracy))
     return accuracy
 
 
@@ -77,11 +76,11 @@ if __name__ == "__main__":
     X_train = X_train_exon + X_train_intron
     y_train = y_train_exon + y_train_intron
     X_test, y_test = parse_fasta_file("Assignment2/KNN/test.fasta")
-    
+
     data = {'sample_size': [],
-        'kmer_size': [],
-        'num_neighbors': [],
-        'accuracy': []}
+            'kmer_size': [],
+            'num_neighbors': [],
+            'accuracy': []}
     df = pd.DataFrame(data)
 
     sample_sizes = ["10", "30", "100"]
@@ -98,9 +97,10 @@ if __name__ == "__main__":
         for kmer_size in kmer_sizes:
             for num_neighbor in num_neighbors:
                 preds = knn(X_train, y_train, X_test, num_neighbor, kmer_size)
-                accuracy = get_accuracy(sample_size, kmer_size, num_neighbor, preds, y_test)
-                new_row = {'sample_size': sample_size,'kmer_size': kmer_size,'num_neighbors': num_neighbor,'accuracy': accuracy}
+                accuracy = get_accuracy(
+                    sample_size, kmer_size, num_neighbor, preds, y_test)
+                new_row = {'sample_size': sample_size, 'kmer_size': kmer_size,
+                           'num_neighbors': num_neighbor, 'accuracy': accuracy}
                 df = df.append(new_row, ignore_index=True)
 
-    print(df)
     df.to_csv('knn_metrics.csv', index=False)
