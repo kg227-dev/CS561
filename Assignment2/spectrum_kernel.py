@@ -4,20 +4,24 @@ import random
 
 def spectrum_kernel(seq1, seq2, k, kmer_dict=None):
     if kmer_dict is None:
-        # Convert sequences to feature vectors
+        kmers = set()
+        for i in range(len(seq1) - k + 1):
+            kmers.add(seq1[i:i+k])
+        for i in range(len(seq2) - k + 1):
+            kmers.add(seq2[i:i+k])
+        kmer_dict = {}
+        for i, kmer in enumerate(sorted(kmers)):
+            kmer_dict[kmer] = i
         vec1 = seq_to_vec(seq1, kmer_dict, k)
         vec2 = seq_to_vec(seq2, kmer_dict, k)
-    # Compute dot product similarity
         return np.dot(vec1, vec2)
     else:
         return np.dot(seq1, seq2)
 
 
 def seq_to_vec(seq, kmer_dict, k):
-    # Initialize feature vector
     vec = np.zeros(len(kmer_dict))
 
-    # Populate feature vector with k-mer counts
     for i in range(len(seq) - k + 1):
         kmer = seq[i:i+k]
         if kmer in kmer_dict:
