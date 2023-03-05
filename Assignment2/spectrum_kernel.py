@@ -2,13 +2,15 @@ import numpy as np
 import random
 
 
-def spectrum_kernel(seq1, seq2, k, kmer_dict):
-    # Convert sequences to feature vectors
-    vec1 = seq_to_vec(seq1, kmer_dict, k)
-    vec2 = seq_to_vec(seq2, kmer_dict, k)
-
+def spectrum_kernel(seq1, seq2, k, kmer_dict=None):
+    if kmer_dict is None:
+        # Convert sequences to feature vectors
+        vec1 = seq_to_vec(seq1, kmer_dict, k)
+        vec2 = seq_to_vec(seq2, kmer_dict, k)
     # Compute dot product similarity
-    return np.dot(vec1, vec2)
+        return np.dot(vec1, vec2)
+    else:
+        return np.dot(seq1, seq2)
 
 
 def seq_to_vec(seq, kmer_dict, k):

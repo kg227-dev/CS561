@@ -38,40 +38,6 @@ def make_dict(sequences, kmer_size):
 
     return kmer_dict
 
-def kmeans_mismatch_cluster(sequences, kmer_size, num_clusters, max_iter=1000):
-    # Generate k-mer dictionary
-    kmer_dict = make_dict(sequences, kmer_size)
-
-    # Initialize centroids
-    centroids = np.random.choice(sequences, size=num_clusters, replace=False)
-
-    centroids = [seq_to_vec(centroid, kmer_dict, kmer_size)
-                 for centroid in centroids]
-
-    # Convert sequences to feature vectors
-    feature_vectors = np.zeros((len(sequences), len(kmer_dict)))
-    for i, seq in enumerate(sequences):
-        feature_vectors[i, :] = seq_to_vec(seq, kmer_dict, kmer_size)
-
-    cluster_assignments = np.zeros(len(sequences))
-
-    # K-means algorithm
-    for iter in range(max_iter):
-        # Assign sequences to closest centroid
-        for i, seq in enumerate(feature_vectors):
-            similarities = np.zeros(num_clusters)
-            for j, centroid in enumerate(centroids):
-                similarities[j] = np.dot(seq, centroid)
-            cluster_assignments[i] = np.argmax(similarities)
-
-        # Update centroids
-        for j in range(num_clusters):
-            cluster_indices = np.where(cluster_assignments == j)[0]
-            if len(cluster_indices) > 0:
-                centroids[j] = np.mean(
-                    feature_vectors[cluster_indices, :], axis=0)
-
-    return cluster_assignments, centroids
 
 def kmeans_spectrum_cluster(sequences, kmer_size, num_clusters, max_iter=100):
     # Generate k-mer dictionary
@@ -96,7 +62,7 @@ def kmeans_spectrum_cluster(sequences, kmer_size, num_clusters, max_iter=100):
         for i, seq in enumerate(feature_vectors):
             similarities = np.zeros(num_clusters)
             for j, centroid in enumerate(centroids):
-                similarities[j] = np.dot(seq, centroid)
+                similarities[j] = spectrum_kernel(seq, centroid, kmer_size, kmer_dict)
             cluster_assignments[i] = np.argmax(similarities)
 
         # Update centroids
@@ -130,8 +96,9 @@ if __name__ == '__main__':
     # Parse FASTA file into sequences and class names
     sequences, class_names = parse_fasta_file(
         "Assignment2/kmeans/kmeans.fasta")
-    kmer_size = 3
-    num_clusters = 3
+    kmer_size = 6
+    num_clusters = 5
     cluster_assignments, centroids = kmeans_spectrum_cluster(
         sequences, kmer_size, num_clusters)
     get_output(cluster_assignments, kmer_size, num_clusters)
+

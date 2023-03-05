@@ -1,7 +1,7 @@
 import random
 
 
-def mismatch_kernel(kmers1, kmers2, k):
+def mismatch_kernel(seq1, seq2, k):
     # Compute all k-mers for both sequences
     kmers1 = [seq1[i:i+k] for i in range(len(seq1)-k+1)]
     kmers2 = [seq2[i:i+k] for i in range(len(seq2)-k+1)]
