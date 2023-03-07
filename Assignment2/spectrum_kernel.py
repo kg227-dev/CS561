@@ -3,6 +3,22 @@ import random
 
 
 def spectrum_kernel(seq1, seq2, k, kmer_dict=None):
+    """
+    Compute the spectrum kernel similarity score between two DNA sequences.
+
+    :param seq1: The first DNA sequence, either as a string or as a feature vector.
+    :type seq1: Union[str, np.ndarray]
+    :param seq2: The second DNA sequence, either as a string or as a feature vector.
+    :type seq2: Union[str, np.ndarray]
+    :param k: The length of the k-mers.
+    :type k: int
+    :param kmer_dict: A dictionary mapping k-mers to indices, used for vectorization.
+    :type kmer_dict: Optional[Dict[str, int]]
+    :return: The similarity score between the two sequences.
+    :rtype: float
+
+    :author: Kush Gulati
+    """
     if kmer_dict is None:
         kmers = set()
         for i in range(len(seq1) - k + 1):
@@ -20,6 +36,20 @@ def spectrum_kernel(seq1, seq2, k, kmer_dict=None):
 
 
 def seq_to_vec(seq, kmer_dict, k):
+    """
+    Converts a DNA sequence into a k-mer frequency vector using a pre-defined k-mer dictionary.
+
+    :param seq: A string representing a DNA sequence.
+    :type seq: str
+    :param kmer_dict: A dictionary where keys are k-mers and values are their corresponding indices in the output vector.
+    :type kmer_dict: dict
+    :param k: An integer representing the k-mer size.
+    :type k: int
+    :return: A numpy array representing the k-mer frequency vector of the input sequence.
+    :rtype: np.ndarray
+
+    :author: Kush Gulati
+    """
     vec = np.zeros(len(kmer_dict))
 
     for i in range(len(seq) - k + 1):
