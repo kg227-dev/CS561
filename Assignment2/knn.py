@@ -30,12 +30,15 @@ def knn(X_train, y_train, X_test, k, kmer_size):
     X_train_feature_vectors = np.zeros((len(X_train), len(kmer_dict)))
     X_test_feature_vectors = np.zeros((len(X_test), len(kmer_dict)))
 
+    # vectorize sequences
+
     for i, seq in enumerate(X_train):
         X_train_feature_vectors[i] = seq_to_vec(seq, kmer_dict, kmer_size)
 
     for i, seq in enumerate(X_test):
         X_test_feature_vectors[i] = seq_to_vec(seq, kmer_dict, kmer_size)
 
+    # iterate through test vectors
     for i in range(len(X_test_feature_vectors)):
         similarities = []
         for j in range(len(X_train_feature_vectors)):
@@ -61,6 +64,8 @@ def knn(X_train, y_train, X_test, k, kmer_size):
                 max_count = count
                 max_label = label
         preds.append(max_label)
+        
+    # return predicted labels
     return preds
 
 

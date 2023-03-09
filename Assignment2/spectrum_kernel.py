@@ -1,6 +1,10 @@
 import numpy as np
 import random
 
+"""
+# the spectrum kernel is more commonly used when comparing 
+# highly similar sequences
+"""
 
 def spectrum_kernel(seq1, seq2, k, kmer_dict=None):
     """
@@ -19,18 +23,29 @@ def spectrum_kernel(seq1, seq2, k, kmer_dict=None):
 
     :author: Kush Gulati
     """
+
+    # get kmer dict if None
     if kmer_dict is None:
-        kmers = set()
+        # declare kmer set, avoiding repetitions
+        kmers_set = set()
+
+        # append seq1 and seq2 kmers to kmers_set
         for i in range(len(seq1) - k + 1):
-            kmers.add(seq1[i:i+k])
+            kmers_set.add(seq1[i:i+k])
         for i in range(len(seq2) - k + 1):
-            kmers.add(seq2[i:i+k])
+            kmers_set.add(seq2[i:i+k])
+
         kmer_dict = {}
-        for i, kmer in enumerate(sorted(kmers)):
+
+        for i, kmer in enumerate(sorted(kmers_set)):
             kmer_dict[kmer] = i
+
+        # prepare vector form to calculate dot product
         vec1 = seq_to_vec(seq1, kmer_dict, k)
         vec2 = seq_to_vec(seq2, kmer_dict, k)
         return np.dot(vec1, vec2)
+    
+    # if kmer dict available, skip computations above
     else:
         return np.dot(seq1, seq2)
 
