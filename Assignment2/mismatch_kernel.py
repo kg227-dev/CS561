@@ -16,37 +16,39 @@ def mismatch_kernel(seq1, seq2, k):
     :param k: The length of the k-mers to be considered.
     :return: An integer representing the similarity_score score between the two sequences based on the mismatch kernel.
 
-    :author: Kush Gulati
+    :author: Kush Gulati + Sydney Ballard
     """
+    n = len(seq1)
+    kernel = 0
+    
+    for i in range(n-k+1):
+        kmer1 = seq1[i:i+k]
+        kmer2 = seq2[i:i+k]
+        
+        if hamming_distance(kmer1, kmer2) <= 1:
+            kernel += 1
+            
+    return float(kernel)
 
-    seq1_kmers = [seq1[i:i+k] for i in range(len(seq1)-k+1)] # sequence 1 list of kmers of length k
-    seq2_kmers = [seq2[i:i+k] for i in range(len(seq2)-k+1)] # sequence 2 list of kmers of length k
 
-    similarity_score = 0 # initializing similarity_score score to 0
-
-    ## The nested loops below compare each respective kmer
-
-    # loop through each kmer of seq1_kmers list
-    for kmer1 in seq1_kmers: 
-        # loop through each kmer of seq2_kmers list
-        for kmer2 in seq2_kmers:
-            # increment mismatch score by 1 if mismatch if found
-            mismatches = sum([1 for i in range(k) if kmer1[i] != kmer2[i]])
-
-            # if mismatches <= 1:
-            #     similarity_score += 1
-
-            similarity_score += 2**(-mismatches)
-
-    return similarity_score
+def hamming_distance(str1, str2):
+    """
+    Computes the Hamming distance between two strings of equal length.
+    
+    :param str1: the first string
+    :param str2: the second string
+    :return: the Hamming distance between the two strings
+    """
+    assert len(str1) == len(str2)
+    return sum(c1 != c2 for c1, c2 in zip(str1, str2))
 
 
 if __name__ == "__main__":
     nucleotides = ['A', 'C', 'G', 'T']
 
     # randomly creating an nucleotide sequence for testing
-    seq1 = ''.join(random.choice(nucleotides) for i in range(5))
-    seq2 = ''.join(random.choice(nucleotides) for i in range(5))
+    seq1 = ''.join(random.choice(nucleotides) for i in range(100))
+    seq2 = ''.join(random.choice(nucleotides) for i in range(100))
 
     k = 3
     similarity_score = mismatch_kernel(seq1, seq2, k)

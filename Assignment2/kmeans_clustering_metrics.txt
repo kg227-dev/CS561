@@ -1,3 +1,7 @@
+Not including all results since assignment asks: "Submit your code and report of results on Sakai (raw ouput files listing all cluster members should not be submitted)."
+
+
+
 SPECTRUM KERNEL (KMER=2, CLUSTERS=2):
 CLUSTER 1:
         intergenic = 0.04 (7)
@@ -112,6 +116,28 @@ CLUSTER 2:
         intron = 0 (0)
         exon = 0 (0)
 CLUSTER 3:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
+
+MISMATCH KERNEL (KMER=2, CLUSTERS=5):
+CLUSTER 1:
+        intergenic = 0.33 (500)
+        intron = 0.33 (500)
+        exon = 0.33 (500)
+CLUSTER 2:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
+CLUSTER 3:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
+CLUSTER 4:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
+CLUSTER 5:
         intergenic = 0 (0)
         intron = 0 (0)
         exon = 0 (0)

@@ -114,9 +114,9 @@ if __name__ == '__main__':
     # Parse FASTA file into sequences and class names
     sequences, class_names = parse_fasta_file(
         "/Users/sydneyballard/Desktop/Desktop - Sydney’s MacBook Pro/CS 561/cs561 repository COLLABORATIVE W KUSH/CS561/Assignment2/kmeans/kmeans.fasta")
-    kernel = "MISMATCH"
-    # kernel = "SPECTRUM"
-    kmer_size = 3
+    # kernel = "MISMATCH"
+    kernel = "SPECTRUM"
+    kmer_size = 2
     num_clusters = 2
     cluster_assignments, centroids = kmeans_cluster(
         sequences, kernel, kmer_size, num_clusters)
