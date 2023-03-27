@@ -1,0 +1,12 @@
+prefix=/Users/sydneyballard/Desktop/Desktop - Sydney’s MacBook Pro/CS 561/cs561 repository COLLABORATIVE W KUSH/CS561/TF2
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Readline
+Description: Gnu Readline library for command line editing
+URL: http://tiswww.cwru.edu/php/chet/readline/rltop.html
+Version: 8.2
+Requires.private: ncurses
+Libs: -L${libdir} -lreadline
+Cflags: -I${includedir}

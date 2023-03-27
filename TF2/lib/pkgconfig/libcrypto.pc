@@ -1,0 +1,12 @@
+prefix=/Users/sydneyballard/Desktop/Desktop - Sydney’s MacBook Pro/CS 561/cs561 repository COLLABORATIVE W KUSH/CS561/TF2
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+enginesdir=${libdir}/engines-1.1
+
+Name: OpenSSL-libcrypto
+Description: OpenSSL cryptography library
+Version: 1.1.1t
+Libs: -L${libdir} -lcrypto
+Libs.private:  
+Cflags: -I${includedir}

@@ -1,0 +1,11 @@
+prefix=/Users/sydneyballard/Desktop/Desktop - Sydney’s MacBook Pro/CS 561/cs561 repository COLLABORATIVE W KUSH/CS561/TF2
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/Users/sydneyballard/Desktop/Desktop - Sydney’s MacBook Pro/CS 561/cs561 repository COLLABORATIVE W KUSH/CS561/TF2/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.4.2
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}
