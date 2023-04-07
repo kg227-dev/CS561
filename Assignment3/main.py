@@ -18,11 +18,8 @@ if __name__ == '__main__':
         # Make model
 
         # Train model
-            # model.fit(X_train, Y_train, verbose=1, validation_data=(X_valid, Y_valid),batch_size=128, epochs=100, callbacks=[EarlyStopping(patience=10, monitor="val_loss", restore_best_weights=True), History()])
+            model.fit(X_train, Y_train, verbose=1, validation_data=(X_valid, Y_valid),batch_size=128, epochs=100, callbacks=[EarlyStopping(patience=10, monitor="val_loss", restore_best_weights=True), History()])
 
 
         # Test model accuracy
-            # pred = model.predict(X_test, batch_size=128)
-            // TODO: Calc percentage correct
-
-        // TODO: save results to file for analysis
+            pred = model.predict(X_test, batch_size=128)
