@@ -1,0 +1,143 @@
+Not including all results since assignment asks: "Submit your code and report of results on Sakai (raw ouput files listing all cluster members should not be submitted)."
+
+
+
+SPECTRUM KERNEL (KMER=2, CLUSTERS=2):
+CLUSTER 1:
+        intergenic = 0.04 (7)
+        intron = 0.01 (1)
+        exon = 0.96 (185)
+CLUSTER 2:
+        intergenic = 0.38 (493)
+        intron = 0.38 (499)
+        exon = 0.24 (315)
+
+SPECTRUM KERNEL (KMER=2, CLUSTERS=3):
+CLUSTER 1:
+        intergenic = 0.4 (473)
+        intron = 0.43 (499)
+        exon = 0.17 (202)
+CLUSTER 2:
+        intergenic = 0.08 (17)
+        intron = 0.0 (0)
+        exon = 0.92 (194)
+CLUSTER 3:
+        intergenic = 0.09 (10)
+        intron = 0.01 (1)
+        exon = 0.9 (104)
+
+SPECTRUM KERNEL (KMER=2, CLUSTERS=5):
+CLUSTER 1:
+        intergenic = 0.41 (463)
+        intron = 0.44 (499)
+        exon = 0.14 (162)
+CLUSTER 2:
+        intergenic = 0.1 (18)
+        intron = 0.0 (0)
+        exon = 0.9 (164)
+CLUSTER 3:
+        intergenic = 0.16 (9)
+        intron = 0.0 (0)
+        exon = 0.84 (49)
+CLUSTER 4:
+        intergenic = 0.03 (1)
+        intron = 0.0 (0)
+        exon = 0.97 (38)
+CLUSTER 5:
+        intergenic = 0.09 (9)
+        intron = 0.01 (1)
+        exon = 0.9 (87)
+
+SPECTRUM KERNEL (KMER=6, CLUSTERS=2):
+CLUSTER 1:
+        intergenic = 0.1 (48)
+        intron = 0.0 (1)
+        exon = 0.89 (413)
+CLUSTER 2:
+        intergenic = 0.44 (452)
+        intron = 0.48 (499)
+        exon = 0.08 (87)
+
+SPECTRUM KERNEL (KMER=6, CLUSTERS=3):
+CLUSTER 1:
+        intergenic = 0.16 (24)
+        intron = 0.01 (1)
+        exon = 0.83 (123)
+CLUSTER 2:
+        intergenic = 0.12 (44)
+        intron = 0.0 (0)
+        exon = 0.88 (316)
+CLUSTER 3:
+        intergenic = 0.44 (432)
+        intron = 0.5 (499)
+        exon = 0.06 (61)
+
+SPECTRUM KERNEL (KMER=6, CLUSTERS=5):
+CLUSTER 1:
+        intergenic = 0.17 (54)
+        intron = 0.54 (172)
+        exon = 0.3 (95)
+CLUSTER 2:
+        intergenic = 0.58 (364)
+        intron = 0.4 (251)
+        exon = 0.03 (16)
+CLUSTER 3:
+        intergenic = 0.26 (31)
+        intron = 0.65 (76)
+        exon = 0.09 (10)
+CLUSTER 4:
+        intergenic = 0.11 (31)
+        intron = 0.0 (0)
+        exon = 0.89 (252)
+CLUSTER 5:
+        intergenic = 0.14 (20)
+        intron = 0.01 (1)
+        exon = 0.86 (127)
+
+===========================================
+
+MISMATCH KERNEL (KMER=2, CLUSTERS=2):
+CLUSTER 1:
+        intergenic = 0.33 (500)
+        intron = 0.33 (500)
+        exon = 0.33 (500)
+CLUSTER 2:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
+
+MISMATCH KERNEL (KMER=2, CLUSTERS=3):
+CLUSTER 1:
+        intergenic = 0.33 (500)
+        intron = 0.33 (500)
+        exon = 0.33 (500)
+CLUSTER 2:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
+CLUSTER 3:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
+
+MISMATCH KERNEL (KMER=2, CLUSTERS=5):
+CLUSTER 1:
+        intergenic = 0.33 (500)
+        intron = 0.33 (500)
+        exon = 0.33 (500)
+CLUSTER 2:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
+CLUSTER 3:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
+CLUSTER 4:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
+CLUSTER 5:
+        intergenic = 0 (0)
+        intron = 0 (0)
+        exon = 0 (0)
